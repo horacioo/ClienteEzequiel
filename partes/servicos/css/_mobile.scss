@@ -1,0 +1,75 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia" as tp;
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to("mobile") {
+    #servicos {
+        overflow: hidden;
+        width: 98vw;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        @include tp.tamanhoFontes();
+
+        h1,
+        h2 {
+            color: cores.$cor1;
+            font-family: "font2";
+            //@include marginBottom();
+            @include tp.titulos();
+        }
+        font-family: "font1";
+        color: cores.$cor2;
+
+        #cards {
+            ul {
+                li {
+                    border: 1px solid cores.$cor1;
+                    margin-bottom: 5vw;
+                    border-radius: 4vw;
+                    padding: 5vw;
+                    background-color: white;
+                    img {
+                        width: 100%;
+                    }
+                    a {
+                        background-color: cores.$cor1;
+                        padding: 2vw;
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        color: white;
+                        border-radius: 2vw;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+
+        a {
+            //  @include buttons.botao(){};
+        }
+
+        #mulher{
+            width: 20vw;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        border: 1px solid  cores.$cor1;
+    }
+}

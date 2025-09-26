@@ -1,0 +1,60 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia" as tp;
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to("mobile") {
+    #about {
+        overflow: hidden;
+        width: 98vw;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        @include tp.tamanhoFontes();
+
+        h1,
+        h2 {
+            color: cores.$cor1;
+            font-family: "font2";
+            //@include marginBottom();
+            @include tp.titulos();
+        }
+        font-family: "font1";
+        color: cores.$cor2;
+
+        #dados {
+            margin-bottom: 6vw;
+            padding-top:3vw;
+            border: 1px solid cores.$cor1;
+            border-radius: 2vw;
+            padding: 2vw;
+            background-color: white;
+            img{
+              position: absolute;
+              right: 12vw;
+            }
+            br{display: none;}
+            span,
+            a {
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                color: cores.$cor1;
+                margin-bottom: 2vw;
+            }
+        }
+
+        a {
+            //  @include buttons.botao(){};
+        }
+    }
+}

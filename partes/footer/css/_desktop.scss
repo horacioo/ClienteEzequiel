@@ -1,0 +1,87 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    footer {
+        height: vw.vw(237);
+        display: block;
+        background-color: cores.$cor1;
+        position: relative;
+
+        p {
+            font-size: vw.vw(8.35);
+            font-family: "light2";
+            line-height: 166%;
+            strong {
+                font-family: "font2";
+            }
+            a {
+                color: white;
+            }
+        }
+
+        #pa1 {
+            position: absolute;
+            left: vw.vw(317.21);
+            top: vw.vw(47.47);
+            color: white;
+            width: vw.vw(367);
+            height: vw.vw(14);
+            line-height: 166%;
+        }
+        /****************************************************/
+
+        #pa2 {
+            position: absolute;
+            left: vw.vw(374.71);
+            top: vw.vw(83.06);
+            color: white;
+            font-size: vw.vw(8.35);
+            line-height: 166%;
+        }
+
+        #pa3 {
+            position: absolute;
+            left: vw.vw(410.21);
+            top: vw.vw(119.65);
+            color: white;
+            font-size: vw.vw(8.35);
+            line-height: 166%;
+        }
+
+        /****************************************************/
+        #b1 {
+            position: absolute;
+            left: vw.vw(485.47);
+            top: vw.vw(69.34);
+            width: vw.vw(31.47);
+            height: auto;
+        }
+        /****************************************************/
+        #b2 {
+            position: absolute;
+            left: vw.vw(485.47);
+            top: vw.vw(105.93);
+            width: vw.vw(31.39);
+            height: auto;
+        }
+        /****************************************************/
+        figure {
+            position: absolute;
+            left: vw.vw(347.19);
+            top: vw.vw(142.53);
+            img {
+                width: vw.vw(308.03);
+                height: auto;
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+}

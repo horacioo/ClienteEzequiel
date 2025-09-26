@@ -1,0 +1,119 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/util/_animacao";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(bigger) {
+    #blog {
+        background-image: url(#{$url}wp-content/themes/nextgLeads/img/fundoComecar.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        color: $cor1;
+        min-height: 50.48828125vw;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 3.5537109375vw;
+        gap: 3.17578125vw;
+
+        h2 {
+            font-size: 2.6025390625vw;
+            font-family: "font3";
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        #textos {
+            font-size: 1.072265625vw;
+            display: flex;
+            align-items: center;
+            #links {
+                padding-left: 1.8740234375vw;
+                padding-right: 1.8740234375vw;
+                padding-top: 0.728515625vw;
+                padding-bottom: 0.728515625vw;
+                display: flex;
+                gap: 0.8330078125vw;
+                width: 13.88671875vw;
+                img {
+                    height: 2.23828125vw;
+                    width: 2.23828125vw;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 3.662109375vw;
+            width: 92.1083984375vw;
+            flex-wrap: wrap;
+            li {
+                width: 19.5517578125vw;
+                padding: 1.31640625vw;
+                background-color: white;
+                border-radius: 0.7314453125vw;
+                border: 0.048828125vw solid $cor1;
+                display: flex;
+                gap: 1.072265625vw;
+                flex-direction: column;
+                picture {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    height: 10.3369140625vw;
+                    border-radius: 0.5849609375vw;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 110%;
+                        height: auto;
+                    }
+                }
+                a {
+                    color: $cor1;
+                }
+                &:hover {
+                    @include hover();
+                }
+                .button {
+                    background-color: $cor2;
+                    color: white;
+                    display: flex;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 5.728515625vw;
+                    text-align: center;
+                    height: 1.6796875vw;
+                    font-size: 0.9169921875vw;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 0.15625vw;
+                }
+                .titulo {
+                    font-family: "font3";
+                    font-weight: normal;
+                    font-size: 2.4375vw;
+                    text-align: center;
+                }
+                .descricao {
+                    font-size: 0.9169921875vw;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

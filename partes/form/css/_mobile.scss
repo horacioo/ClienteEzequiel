@@ -1,0 +1,52 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia" as tp;
+@use "../../../css/util/_vw.scss";
+
+ 
+
+@include breakpoints.respond-to("mobile") {
+    #formulario {
+        overflow: hidden;
+        width: 98vw;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        @include tp.tamanhoFontes();
+
+        h1,
+        h2 {
+            color: cores.$cor1;
+            font-family: "font2";
+            //@include marginBottom();
+            @include tp.titulos();
+        }
+        font-family: "font1";
+        color: cores.$cor2;
+        form{
+            p label { 
+                display: block;
+                input{
+                    color: cores.$cor1;
+                    width: 100%;
+                    display: block;
+                    border: 1px solid cores.$cor1;
+                    font-size: 4vw;
+                    padding: 3vw;
+
+                }
+            } 
+         }
+        .wpcf7-submit{
+            margin-top:5vw;
+            @include buttons.botao();
+        }
+    }
+}

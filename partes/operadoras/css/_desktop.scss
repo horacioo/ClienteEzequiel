@@ -1,0 +1,181 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #operadoras {
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        min-height: vw.vw(737);
+        height: auto;
+        background-color: rgba(82, 255, 168, 0.356);
+        padding: 0;
+        padding-bottom: vw.vw(69.89);
+
+        background-size: cover;
+        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/operadoras/imagens/fundao.jpg);
+        background-attachment: fixed;
+        /******************************************************/
+        header {
+            width: vw.vw(491.33);
+            height: auto;
+            position: absolute;
+            left: vw.vw(76.67);
+            top: vw.vw(56.85);
+
+            h2 {
+                color: cores.$cor1;
+                font-family: "font2";
+                font-size: vw.vw(16.69);
+                line-height: 125%;
+            }
+        }
+        /******************************************************/
+        #apresentacao {
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            left: vw.vw(76.67);
+            top: vw.vw(144.89);
+            width: vw.vw(491.33);
+            height: vw.vw(188.86);
+            font-size: vw.vw(8.35);
+            border-radius: vw.vw(9.91);
+            padding: vw.vw(10.43);
+            display: flex;
+            flex-direction: column;
+            gap: vw.vw(7);
+            overflow: hidden;
+            color: cores.$cor2;
+            font-family: 'light1';
+            line-height: 166%;
+            text-align: justify;
+            p{
+                margin-bottom: vw.vw(8.44);
+            }
+            strong{
+                font-family: 'font2';
+            }
+        }
+
+        /******************************************************/
+        #blockPicture {
+            position: absolute;
+            left: vw.vw(616.51);
+            top: vw.vw(-73.02);
+            width: vw.vw(384.4);
+            height: vw.vw(558.09);
+            display: block;
+
+            // garante que os filhos absolutos fiquem relativos a este bloco
+            position: relative;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+                display: block;
+
+                position: absolute;
+                bottom: 0; // cola no rodapé
+                left: 0; // garante alinhamento lateral
+            }
+        }
+
+        /******************************************************/
+        #operadorasPrincipais {
+            ul {
+                position: absolute;
+                left: vw.vw(76.67);
+                top: vw.vw(358.79);
+                #paineisComDetalhes {
+                    display: flex;
+                    flex-direction: column;
+                    gap: vw.vw(13.6);
+
+                    $asd: vw.vw(0.52);
+                    position: relative;
+                    width: vw.vw(492.89);
+                    border: $asd solid #5d5d5d;
+                    background-color: white;
+                    padding-left: vw.vw(20.93);
+                    padding-right: vw.vw(20.93);
+                    padding-top: vw.vw(17.27);
+                    padding-bottom: vw.vw(28.78);
+                    border-radius: vw.vw(4.19);
+
+                    h3 {
+                        text-transform: uppercase;
+                        color: cores.$cor1;
+                        font-size: vw.vw(16.74);
+                        font-family: "font2";
+                        line-height: 125%;
+                    }
+                    #descricaoDaOperadora {
+                        font-size: vw.vw(8.37);
+                        line-height: 166%;
+                        font-family: "light1";
+                        font-weight: 200;
+                        text-align: left;
+                        color: #5d5d5d;
+
+                    }
+
+                    /**************************************/
+                    #bandeiras {
+                        position: relative;
+
+                        #lista {
+
+                            top: 0px;
+                            left: 0px;
+                            display: flex;
+                            flex-direction: row;
+                            position: relative;
+                            gap: vw.vw(15.7);
+                            li {
+
+                                width: vw.vw(90.1);
+                                height: vw.vw(73.67);
+               
+                                picture{
+                                    img{
+                                        width:100%;
+                                        height:100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    /**************************************/
+                }
+            }
+        }
+        /*#operadorasPrincipais {
+            
+            
+
+   
+
+           
+
+               
+               
+                
+               
+                
+            
+
+           
+            
+          
+            
+            
+        /**************************************************************************************/
+    }
+}

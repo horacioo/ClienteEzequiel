@@ -1,0 +1,89 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #idosos {
+        a {
+            color: white;
+        }
+        padding-left: vw.vw(501);
+        padding-top: vw.vw(52.16);
+        display: block;
+        position: relative;
+        //height: vw.vw(452.73);
+        border: 1px  solid rgba(255, 0, 0, 0);
+        background-size: cover;
+        background-image: url(#{c.$url}/wp-content/themes/ezequiel/partes/idosos/imagens/fundao.jpg);
+
+        header {
+            h2 {
+                color: cores.$cor1;
+                font-size: vw.vw(16.69);
+                line-height: 125%;
+                width: vw.vw(417.83);
+                font-family: "font2";
+                text-align: left;
+            }
+            margin-bottom: vw.vw(26.33);
+        }
+
+        // conteúdo descritivo
+        div[itemprop="description"] {
+            position: relative;
+            width: vw.vw(374.86);
+            height: vw.vw(213.29);
+            padding: vw.vw(15.65);
+            margin-bottom: vw.vw(27.68);
+            border-radius: vw.vw(6.26);
+            border: 1px solid #5d5d5d15;
+            background-color: rgba(255, 255, 255, 0.52);
+            font-family: 'light1';
+            line-height: 166%;
+            
+            p {
+                font-size: vw.vw(8.35);
+                line-height: 166%;
+                color: cores.$cor2;
+
+                strong {
+                   font-family: 'font2';
+                }
+
+                em {
+                }
+            }
+        }
+
+        // call-to-action
+        .cta,
+        a {
+            font-size: vw.vw(10.7);
+            height: vw.vw(53.09);
+            width: vw.vw(121.65);
+            @include btn.botao();
+        }
+
+        // imagem
+        picture {
+            position: absolute;
+            left: vw.vw(4);
+            bottom: 0;
+            width: vw.vw(512.5);
+            height: vw.vw(491.33);
+            //right:vw.vw(484.94);
+           /// border: 1px  solid red;
+            img{
+           
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+            }
+        }
+    }
+}

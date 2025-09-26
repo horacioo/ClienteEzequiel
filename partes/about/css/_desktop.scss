@@ -1,0 +1,83 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #about {
+        height: vw.vw(195.37);
+        display: block;
+        font-size: vw.vw(12.98);
+        background-color: cores.$cor2;
+        color: white;
+        text-align: center;
+        position: relative;
+
+        a {
+            color: white;
+        }
+
+        header {
+            position: absolute;
+            top: vw.vw(30.08);
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-family: "font2";
+            font-size: vw.vw(12.99);
+            h2{
+                font-size: vw.vw(12.99);
+            }
+        }
+
+        footer{
+            all: unset;
+            position: absolute;
+            top: vw.vw(148.57);
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'font2';
+            font-weight: normal;
+            font-size: vw.vw(10.38);
+
+        }
+
+        #dados {
+            position: absolute;
+            top:vw.vw(66.86);
+            display: flex;
+            width: vw.vw(331.98);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            height: vw.vw(71.66);
+            p {
+                display: flex;
+                flex-direction: row;
+                font-size: vw.vw(10.38);
+                min-width: vw.vw(91.56);
+                gap: vw.vw(6.44);
+                img{
+                    width: vw.vw(34);
+                    height: auto;
+                }
+                span,
+                a {
+                    display: table;
+                    min-width: vw.vw(91.56);
+                    width: auto;
+                    border-radius: vw.vw(3);
+                    background-color: white;
+                    color:cores.$cor1;
+                    padding: vw.vw(9.39);
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

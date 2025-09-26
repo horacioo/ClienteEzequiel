@@ -1,0 +1,68 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    main {
+        height: vw.vw(293.07);
+
+        //display: flex;
+        //align-items: center;
+        //justify-content: space-around;
+
+        background-size: cover;
+        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/quemsomos/imagens/fundao.jpg);
+        position: relative;
+
+        #painel {
+            top: vw.vw(64.15);
+            left: vw.vw(166.91);
+
+            position: absolute;
+            width: vw.vw(667.62);
+            background-color: white;
+            $bord: vw.vw(0.52);
+            border: $bord solid cores.$cor1;
+
+            border-radius: vw.vw(8.87);
+            $border: vw.vw(0.52);
+            border: $border solid cores.$cor1;
+            height: vw.vw(164.76);
+            header {
+                left: vw.vw(26.08);
+                top: vw.vw(26.08);
+                position: absolute;
+                h2 {
+                    line-height: 100%;
+                    color: cores.$cor1;
+                    font-size: vw.vw(28.1);
+                    height: vw.vw(28);
+                    font-family: "font1";
+                }
+            }
+
+            #textos{
+                position: absolute;
+                top: vw.vw(68.68); 
+                left: vw.vw(26.68);
+                font-size: vw.vw(8.35);
+                line-height: 166%;
+                width: vw.vw(615.46);
+                font-family: 'light1';
+                color: cores.$cor2;
+                padding: 0;
+                p{
+                    font-family: 'light1';
+                    strong,.negrito{ 
+                    font-family: 'light1';
+                }}
+            }
+            
+        }
+    }
+}

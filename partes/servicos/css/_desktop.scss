@@ -1,0 +1,142 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #servicos {
+        padding-top: vw.vw(40.68);
+        padding-left: vw.vw(109.53);
+        padding-right: vw.vw(109.53);
+        height: vw.vw(450.12);
+
+        background-size: cover;
+        position: relative;
+        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/servicos/imagens/fundo.jpg);
+
+        position: relative;
+        header {
+            h2 {
+                width: vw.vw(604.51);
+                font-family: "font3";
+                color: cores.$cor2;
+                font-size: vw.vw(10.95);
+            }
+            margin-bottom: vw.vw(32.32);
+        }
+
+        #cards {
+            margin-bottom: vw.vw(50.83);
+
+            ul {
+                width: vw.vw(604.94);
+                display: flex;
+                justify-content: space-between; /* primeiro e último encostam nos cantos */
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    &:hover {
+                        animation: grow 340ms forwards;
+                    }
+                    $top: vw.vw(5);
+                    $left: vw.vw(5);
+                    box-shadow: $top $left rgba(0, 0, 0, 0.4);
+
+                    border-radius: vw.vw(5.53);
+                    width: vw.vw(135.52);
+                    font-size: vw.vw(8.37);
+                    font-family: "font1";
+                    color: cores.$cor2;
+                    border-width: vw.vw(0.29);
+                    border-color: cores.$cor1;
+                    border-style: solid;
+                    margin-right: vw.vw(20.96);
+                    flex: 0 0 auto;
+                    padding-bottom: vw.vw(9.89);
+                    padding-top: vw.vw(9.89);
+                    padding-left: vw.vw(11.63);
+                    padding-right: vw.vw(11.63);
+                    background-color: white;
+                    min-height: vw.vw(254.29);
+                    height: auto;
+                    article {
+                        display: flex;
+                        flex-direction: column;
+                        gap: vw.vw(6.28);
+                        picture {
+                            overflow: hidden;
+                            width: vw.vw(115.74);
+                            height: vw.vw(64.85);
+                            position: relative;
+                            display: block;
+                           
+                            img {
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                        h3 {
+                            color: cores.$cor1;
+                            line-height: 153%;
+                            font-size: vw.vw(10.9);
+                        }
+                        p {
+                            font-weight: 100;
+                            font-size: vw.vw(8.37);
+                            text-align: left;
+                            line-height: 166%;
+                        }
+
+                        a {
+                            color: white;
+                            background-color: cores.$cor1;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: vw.vw(9.35);
+                            height: vw.vw(24);
+                            font-size: vw.vw(9.7);
+                            position: relative;
+                            width: 100%;
+                            box-shadow: 0.6vw 0.6vw rgba(0, 0, 0, 0.515);
+                        }
+                    }
+                }
+            }
+        }
+        /************************************************************/
+        #mulher {
+            position: absolute;
+            top: vw.vw(-5.22);
+            left: vw.vw(734.9);
+            width: vw.vw(266.53);
+            height: vw.vw(454.82);
+            img {
+                height: vw.vw(454.82);
+                width: auto;
+                object-fit: cover;
+            }
+        }
+        /************************************************************/
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.4); ///transform: scale(1.4) rotate(1deg);
+        z-index: 40000;
+    }
+}

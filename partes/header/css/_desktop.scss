@@ -1,0 +1,246 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@function vw($px-value) {
+    @return math.div($px-value, 1000) * 100vw;
+}
+
+@include breakpoints.respond-to(bigger) {
+    #header {
+        background-size: cover;
+        position: relative;
+        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/header/imagens/fundao.jpg);
+        width: vw(1000);
+        height: vw(587);
+        display: block;
+        overflow: hidden;
+
+        a {
+            position: absolute;
+            top: vw.vw(368.67);
+            left: vw.vw(405.7);
+
+            width: vw.vw(121.65);
+            height: vw.vw(53.09);
+            z-index: 4000;
+            @include buttons.botao();
+        }
+
+        picture {
+            position: absolute;
+            left: vw(460.03);
+            top: vw(68.85);
+            width: vw(555.48);
+            height: vw(524.19);
+            display: block;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+                bottom: 0;
+                position: absolute;
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: vw(32);
+            left: vw(125.09);
+            color: cores.$cor1;
+            width: vw(413.48);
+            font-size: vw(39.66);
+            text-align: left;
+            font-family: "font1";
+            font-weight: normal;
+            strong {
+                font-family: "font2";
+                font-size: vw(44.41);
+            }
+            line-height: 109%;
+        }
+
+        #slide {
+            position: absolute;
+            left: vw(125.09);
+            top: vw(142.09);
+            width: vw(333.81);
+            height: vw(38.6);
+            ul {
+                left: vw(10.7);
+                top: vw(7.29);
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                li {
+                    img {
+                        height: vw(24.01);
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        #slide2 {
+            position: absolute;
+            left: vw(125.09);
+            top: vw(268.69);
+            width: vw(333.81);
+            height: vw(38.6);
+            ul {
+                left: vw(10.7);
+                top: vw(7.29);
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                li {
+                    img {
+                        height: vw(24.01);
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        P {
+            position: absolute;
+            left: vw(125.09);
+            top: vw(203.69);
+            color: cores.$cor2;
+            width: vw(334.33);
+            height: vw(42);
+            font-size: vw(10.89);
+            line-height: 133%;
+            font-family: "font3";
+            font-weight: bold;
+            text-align: justify;
+        }
+
+        #cnpjOuMei {
+            position: absolute;
+
+            left: vw(143.87);
+            top: vw(336.5);
+
+            width: vw(386.36);
+            height: vw(23);
+
+            font-size: vw(23.41);
+
+            text-align: left;
+            color: cores.$cor1;
+
+            color: cores.$cor1;
+            font-family: "font4";
+            line-height: 100%;
+            letter-spacing: 0;
+            $bbbx: vw(2.09);
+            text-shadow: $bbbx $bbbx rgba(0, 0, 0, 0.18);
+        }
+
+        #listaDeDados {
+            color: cores.$cor2;
+            position: absolute;
+
+            left: vw(165); //left: vw(143.87);
+            top: vw(373.11);
+
+            width: vw(340.45);
+            height: vw(100.43);
+            //190
+            li {
+                font-size: vw(10.37);
+                font-weight: bold;
+                line-height: 174%;
+                text-align: left;
+                list-style: circle;
+                line-height: 174%;
+                font-family: "font2";
+            }
+        }
+
+        #texto1 {
+            position: absolute;
+            left: vw(125.09);
+            font-size: vw(18.25);
+            font-family: "font3";
+            top: vw(484.26);
+            left: vw(125.9);
+            z-index: 30000;
+            width: vw(612.71);
+            line-height: 151%;
+            color: cores.$cor2;
+        }
+
+        .container {
+            width: vw(430.22);
+            display: grid;
+            grid-auto-rows: auto; // cada item ocupa altura automática
+            row-gap: vw(29); //row-gap: 2.24609375vw; // espaçamento apenas ENTRE linhas (sem antes do 1º)
+            left: vw(125.09);
+            top: vw(32);
+            position: absolute;
+
+            #slide,
+            #slide2 {
+                width: vw(333.81);
+                ul {
+                    li {
+                        line-height: 0;
+                        img {
+                            width: auto;
+                            height: vw(27.13);
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-family: "font3";
+                font-size: vw(10.89);
+                line-height: 133%;
+                text-align: justify;
+                color: cores.$cor2;
+                width: vw(334.33);
+            }
+
+            #caracteristicas {
+                width: vw(418.83);
+                display: grid;
+                row-gap: vw(9.39);
+                padding-left: vw(18.78);
+                padding-bottom: vw(16.69);
+                h2 {
+                    font-size: vw(23.41);
+                    font-family: "font1";
+                    color: cores.$cor1;
+                }
+                ul {
+                    li {
+                        list-style: circle;
+                        font-size: vw(10.37);
+                        line-height: 174%;
+                        font-family: "font3";
+                        color: cores.$cor2;
+                    }
+                }
+            }
+
+            #texto1 {
+                font-family: "font2";
+                color: cores.$cor2;
+                font-size: vw(18.25);
+                z-index: 30;
+                width: vw(613);
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+
+@import "../../../css/reset/reset";
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/mixins/titulos";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(mobile) {
+    #blog {
+        @include Profundidade;
+        @include Profundidade;
+        margin-left: 2.9296875vw;
+        margin-right: 2.9296875vw;
+        height: auto;
+        position: relative;
+        color: $cor1;
+        padding-top: 4vw;
+        padding-bottom: 3.904947916667vh;
+
+        h2 {
+            margin-bottom: 1.953125vw;
+            color: darken($cor1, 15);
+            @include titulos();
+        }
+
+        #textos {
+            margin-bottom: 9vw;
+            @include tamanhoFontes();
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            gap: 1.7744140625vw;
+
+            position: relative;
+            width: 99%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            li {
+                min-height: 27.333984375vw;
+                padding: 1.311328125vw;
+                //border: 0.09765625vw solid #e0e0e0;
+                display: block;
+                border-radius: 1.0458984375vw;
+                gap: 1.07421875vw;
+                align-items: center;
+                flex-direction: column;
+                background-color: white;
+                width: 99%;
+                border: 1px solid $cor1;
+                margin-bottom: 4vw;
+                background-color: lighten($cor1,67%);
+               
+
+                picture {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border: 1px solid $cor1;
+                        border-radius: 0.48828125vw;
+                    }
+                }
+                .titulo {
+                    color: darken($cor1, 15);
+                    margin-bottom: 3vw;
+                    display: block;
+                    text-align: center;
+                    font-size: 5vw;
+                    font-family: "font3";
+                    @include titulos2();
+                    font-weight: normal;
+                    text-transform: capitalize;
+                    
+                }
+                .descricao {
+                    color: darken($cor1, 5);
+                    line-height: 7vw;
+                    text-align: justify;
+                    font-size: 3vw;
+                    margin-bottom: 3vh;
+                    display: block;
+                    @include tamanhoFontes();
+                    
+                }
+
+                .button {
+                    background-color: $cor1;
+                    padding: 2%;
+                    color: white;
+                    border-radius: 0.29296875vw;
+                    width: 100%;
+                    align-items: center;
+                    text-align: center;
+                    display: block;
+                    margin-top: 4vw;
+                }
+            }
+        }
+    }
+}

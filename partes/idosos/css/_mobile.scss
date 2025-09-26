@@ -1,0 +1,72 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia" as tp;
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to("mobile") {
+    #idosos{
+        overflow: hidden;
+        width: 98vw;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        @include tp.tamanhoFontes();
+        border-bottom:1px  solid cores.$cor1 ;
+
+        h1,
+        h2 {
+            color: cores.$cor1;
+            font-family: "font2";
+            //@include marginBottom();
+            @include tp.titulos();
+        }
+        font-family: "font1";
+        color: cores.$cor2;
+
+        #cards {
+            ul {
+                li {
+                    border: 1px solid cores.$cor1;
+                    margin-bottom: 5vw;
+                    border-radius: 4vw;
+                    padding: 5vw;
+                    img {
+                        width: 100%;
+                    }
+                    a {
+                        background-color: cores.$cor1;
+                        padding: 2vw;
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        color: white;
+                        border-radius: 2vw;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+
+        a {
+             @include buttons.botao(){};
+        }
+
+        picture{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 4000000000;
+            img{
+                display: block;
+            }
+        }
+
+    }
+}

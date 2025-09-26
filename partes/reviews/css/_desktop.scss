@@ -1,0 +1,211 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #MeusReviews {
+        min-height: vw.vw(311.75);
+        height: auto;
+        position: relative;
+        background-size: cover;
+        background-image: url(#{c.$url}/wp-content/themes/ezequiel/partes/reviews/imagens/fundao.jpg);
+        /***************************************************/
+        #arrowLeft,
+        #arrowRight {
+            position: absolute;
+            top: vw.vw(131.74);
+            height: vw.vw(71.68);
+            width: vw.vw(57.556);
+            z-index: 5000;
+             cursor: pointer;
+        }
+        #arrowLeft {
+            left: vw.vw(90.15);
+        }
+        #arrowRight {
+            left: vw.vw(853.73);
+        }
+        /***************************************************/
+        #tituloBloco {
+            position: absolute;
+            top: vw.vw(30.25);
+            left: vw.vw(379.22);
+            height: vw.vw(21);
+            width: vw.vw(245);
+            h2 {
+                font-size: vw.vw(16.69);
+                line-height: 125%;
+                font-family: "font2";
+                font-weight: bolder;
+                line-height: 125%;
+                text-align: left;
+                color: white;
+            }
+        }
+        /***************************************************/
+        #depoimentosxxxxx {
+            position: absolute;
+            top: vw.vw(71.59);
+            left: vw.vw(159.41);
+            font-size: vw.vw(8);
+            display: flex;
+            flex-direction: row;
+
+            gap: vw.vw(26.98);
+            li {
+                position: relative;
+                background-color: white;
+                border: 1px solid cores.$cor2;
+                border-radius: vw.vw(9.42);
+                width: vw.vw(209.29);
+                height: vw.vw(192.17);
+                article {
+                    border: 1px soldi rgb(84, 0, 105);
+                    /******************************************/
+                    header {
+                        position: absolute;
+                        top: vw.vw(26.16);
+                        left: vw.vw(27.73);
+
+                        .data {
+                            border: 1px soldi rgb(0, 225, 255);
+                            font-size: vw.vw(8.37);
+                            line-height: 166%;
+                            color: cores.$cor1;
+                            font-family: "font1";
+                        }
+                        .nomeCliente {
+                            color: cores.$cor1;
+                            font-size: vw.vw(16.74);
+                            font-family: "font2" !important;
+                            line-height: 125%;
+                            position: relative;
+                            top: vw.vw(8);
+                            text-transform: uppercase;
+                        }
+                    }
+                    /******************************************/
+                    .depoimento {
+                        position: absolute;
+                        top: vw.vw(76.86);
+                        left: vw.vw(27.73);
+                        width: vw.vw(153.83);
+                        color: cores.$cor1;
+                        text-align: left;
+                        font-family: "font2";
+                        font-size: vw.vw(8.37);
+                        line-height: 166%;
+                    }
+                    /******************************************/
+                    a {
+                        position: absolute;
+                        top: vw.vw(156.01);
+                        left: vw.vw(27.03);
+                        width: vw.vw(110);
+                        color: cores.$cor2;
+                        font-family: "font2";
+                        text-transform: uppercase;
+                        line-height: 125%;
+                        font-size: vw.vw(8.37);
+                    }
+                    /******************************************/
+                    .rateStar {
+                        position: absolute;
+                        top: vw.vw(126.71);
+                        left: vw.vw(27.73);
+                        width: vw.vw(127.45);
+                    }
+                    /******************************************/
+                }
+            }
+        }
+
+        /************************************************************/
+        #depoimentos {
+      
+            position: relative;
+            top: vw.vw(71.59);
+            left: vw.vw(159.91);
+            width: vw.vw(707.85);
+
+            li {
+                height: vw.vw(192.17);
+                width: vw.vw(209.29);
+                background-color: white;
+                margin-right: vw.vw(26.98);
+
+                border: 1px solid cores.$cor2;
+                border-radius: vw.vw(9.42);
+
+                article {
+                    border: 1px soldi rgb(84, 0, 105);
+                    position: relative;
+                    /******************************************/
+                    header {
+                        position: relative;
+                        top: vw.vw(26.16);
+                        left: vw.vw(27.73);
+
+                        .data {
+                            border: 1px soldi rgb(0, 225, 255);
+                            font-size: vw.vw(8.37);
+                            line-height: 166%;
+                            color: cores.$cor1;
+                            font-family: "font1";
+                        }
+                        
+
+                        .nomeCliente {
+                            color: cores.$cor1;
+                            font-size: vw.vw(16.74);
+                            font-family: "font2" !important;
+                            line-height: 125%;
+                            position: relative;
+                            top: vw.vw(8);
+                            text-transform: uppercase;
+                        }
+                    }
+                    /******************************************/
+                    .depoimento {
+                        position: absolute;
+                        top: vw.vw(76.86);
+                        left: vw.vw(27.73);
+                        width: vw.vw(153.83);
+                        color: cores.$cor1;
+                        text-align: left;
+                        font-family: "font2";
+                        font-size: vw.vw(8.37);
+                        line-height: 166%;
+                    }
+                    /******************************************/
+                    a {
+                        position: absolute;
+                        top: vw.vw(156.01);
+                        left: vw.vw(27.03);
+                        width: vw.vw(110);
+                        color: cores.$cor2;
+                        font-family: "font2";
+                        text-transform: uppercase;
+                        line-height: 125%;
+                        font-size: vw.vw(8.37);
+                    }
+                    /******************************************/
+                    .rateStar {
+                        position: absolute;
+                        top: vw.vw(126.71);
+                        left: vw.vw(27.73);
+                        width: vw.vw(127.45);
+                    }
+                    /******************************************/
+                }
+            }
+        }
+
+        /************************************************************/
+    }
+}

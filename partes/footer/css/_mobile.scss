@@ -1,0 +1,59 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia" as tp;
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to("mobile") {
+    footer {
+        overflow: hidden;
+        width: 98vw;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        @include tp.tamanhoFontes();
+        background-color: cores.$cor1;
+
+        h1,
+        h2 {
+            color: cores.$cor1;
+            font-family: "font2";
+            //@include marginBottom();
+            @include tp.titulos();
+        }
+        font-family: "font1";
+        color: white;
+
+        a {
+            @include buttons.botao() {
+            }
+        }
+
+        #b1,
+        #b2 {
+            margin-top: 15vw;
+            margin-bottom: 10vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12vw;
+        }
+
+        a {
+            background-color: white;
+            color: cores.$cor1;
+        }
+
+        img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

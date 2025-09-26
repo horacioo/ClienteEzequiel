@@ -1,0 +1,102 @@
+@import "../../../../css/mixins/heights";
+@import "../../../../css/util/_breakpoints";
+@import "../../../../css/variaveis/caminhos";
+@import "../../../../css/variaveis/caminhos";
+@import "../../../../css/mixins/button";
+@import "../../../../css/util/_animacao";
+@import "../../../../css/util/breakpoints";
+
+@mixin card() {
+    width: 20.7626953125vw;
+    min-height: 33.390625vw;
+    display: flex;
+    border: 1px solid $cor1;
+    flex-direction: column;
+    padding-left: 1.826171875vw;
+    padding-right: 1.826171875vw;
+    padding-top: 1.826171875vw;
+    padding-bottom: 1.826171875vw;
+    border-radius: 0.521484375vw;
+    margin-bottom: 2vw;
+    
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-size: 2.19140625vw;
+        font-family: "font3" !important;
+        display: inline-block;
+        color: $cor2;
+    }
+
+    picture {
+        width: 100%;
+        min-height: 9.3896484375vw;
+        border-radius: 0.4169921875vw;
+        border: 1px solid $cor1;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 0.6259765625vw;
+        img {
+            width: 110%;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    a {
+        color: $cor1;
+    }
+
+    span {
+        font-size: 0.88671875vw;
+        line-height: 174%;
+        color: $cor1;
+        display: block;
+        margin-bottom: 2vw;
+    }
+
+    a {
+        
+        position: relative;
+        background-color: $cor1;
+        color: white;
+        width: 8.2412109375vw;
+        height: 2.162109375vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.095703125vw;
+        border-radius: 0.208984375vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@include respond-to(bigger) {
+    #blog {
+        margin-top: 8vw;
+        position: relative;
+        width: 100%;
+        padding-left: 3.556640625vw;
+        padding-right: 3.556640625vw;
+        //border: 1px solid $cor1;
+        padding-top: 1.171875vw;
+        padding-bottom: 1.171875vw;
+        height: auto;
+        display: block;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;//justify-content: space-around;
+            li {
+                @include card();
+            }
+        }
+    }
+}

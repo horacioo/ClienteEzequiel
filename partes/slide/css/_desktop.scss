@@ -1,0 +1,116 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #slideDeProdutosdaCorretora {
+        height: vw.vw(410);
+        width: 100%;
+        padding-left: vw.vw(82.41);
+        padding-right: vw.vw(82.41);
+        padding-top: vw.vw(69.37);
+        ///padding-bottom: vw.vw(69.37);
+        overflow: hidden;
+        /************************************************/
+        background-size: cover;
+        background-image: url(#{c.$url}/wp-content/themes/ezequiel/partes/slide/imagens/fundao.jpg);
+
+        /************************************************/
+        ul {
+            
+            
+            li {
+                article {
+                    width: vw.vw(812.59);
+                    height: vw.vw(272.08);
+                    $brd: vw.vw(0.52);
+                    border: $brd solid cores.$cor1;
+                    $radius: vw.vw(6.8);
+                    border-radius: $radius;
+                    position: relative;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    header {
+                        position: absolute;
+                        top: vw.vw(59.65);
+                        left: vw.vw(19.36);
+                        h2 {
+                            line-height: 125%;
+                            font-size: vw.vw(24.59);
+                            color: cores.$cor1;
+                            font-family: "font2";
+                        }
+                    }
+                    p {
+                        position: absolute;
+                        left: vw.vw(32.44);
+                        top: vw.vw(96.28);
+                        font-size: vw.vw(8.37);
+                        font-family: "light1";
+                        color: cores.$cor2;
+                        display: block;
+                        line-height: 166%;
+                        width: vw.vw(355.28);
+                    }
+
+                    #empresas {
+                        position: absolute;
+                        left: vw.vw(32.44);
+                        top: vw.vw(142.07);
+                        padding: 0;
+                        height: vw.vw(5);
+                        z-index: 30;
+                        img {
+                            width: vw.vw(402.89);
+                            height: auto;
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        position: absolute;
+                        left: vw.vw(19.36);
+                        top: vw.vw(180.52);
+                        width: vw.vw(94.65);
+                        height: vw.vw(53.09);
+                        background-color: cores.$cor2;
+                        color: white;
+                        font-size: vw.vw(10.7);
+                        border-radius: vw.vw(9.35);
+                        $bs: vw.vw(8.63);
+                        box-shadow: $bs $bs rgba(0, 0, 0, 0.26);
+                    }
+
+                    #imagemLateral {
+                        z-index: 0;
+                        position: absolute;
+                        left: vw.vw(389.29);
+                        top: vw.vw(-38.2);
+                        width: vw.vw(423.3);
+                        height: vw.vw(310.28);
+                        img {
+                            width: vw.vw(423.3);
+                            height: vw.vw(310.28);
+                            object-fit: contain;
+                            position: relative;
+                            bottom: 0;
+                            display: block;
+                            object-position: bottom;
+                            bottom: vw.vw(2);
+                        }
+                    }
+                }
+            }
+        }
+        /************************************************/
+    }
+}

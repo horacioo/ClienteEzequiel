@@ -1,0 +1,119 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #formulario {
+        height: vw.vw(515);
+        display: block;
+        gap: vw.vw(19.94);
+        background-size: cover;
+        position: relative;
+        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/form/imagens/fundo.jpg);
+        background-position-y: -12.4vw;
+
+        header {
+            width: vw.vw(830.88);
+            height: vw.vw(44.99);
+            background-color: cores.$cor1;
+            font-size: vw.vw(11.93);
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            border-radius: vw.vw(6.26);
+            position: relative;
+            left: vw.vw(144.48);
+        }
+
+        #MeusForms {
+            display: flex;
+            flex-direction: row;
+            gap: vw.vw(19.94);
+            width: vw.vw(581.9);
+            position: relative;
+            left: 50%;
+            transform: translatex(-50%);
+            margin-top: vw.vw(45.24);
+
+            #formFamiliar,
+            #formEmpresa {
+                width: vw.vw(285.72);
+                overflow: hidden;
+                min-height: vw.vw(352.29);
+                height: auto;
+                border: vw.vw(0.57) solid cores.$cor2;
+                padding-left: vw.vw(11.38);
+                padding-right: vw.vw(11.38);
+                padding-top: vw.vw(13.65);
+                border-radius: vw.vw(6.26);
+                display: flex;
+                flex-direction: column;
+                gap: vw.vw(12.51);
+                box-shadow: 0.5556640625vw 0.5556640625vw rgba(0, 0, 0, 0.425);
+                background-color: white;
+                h2 {
+                    font-family: "font2";
+                    font-size: vw.vw(10.82);
+                    line-height: 184%;
+                    color: cores.$cor1;
+                }
+                h3 {
+                    font-family: "font1";
+                    font-size: vw.vw(7.36);
+                    font-weight: 100;
+                    color: cores.$cor1;
+                }
+
+                .wpcf7 {
+                    font-size: vw.vw(9.13);
+                    font-weight: 100;
+                    /**************************************/
+                    .wpcf7-response-output {
+                        border: 1px solid cores.$cor1;
+                        color: cores.$cor1;
+                    }
+                    /**************************************/
+                    .wpcf7-not-valid-tip {
+                        color: cores.$cor1;
+                        font-size: vw.vw(9.13);
+                    }
+                    /**************************************/
+
+                    /**********formatando botão************/
+                    .wpcf7-submit {
+                        
+                        @include buttons.botao();
+                    }
+                    /**************************************/
+                    p {
+                        label {
+                            br {
+                                display: none;
+                            }
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            display: inline-block;
+                            margin-bottom: vw.vw(12.51);
+                            font-weight: 100;
+                            font-size: vw.vw(9.13);
+                            color: cores.$cor2;
+                            input {
+                                border: 1px solid cores.$cor1;
+                                height: vw.vw(21);
+                                border-radius: vw.vw(2.85);
+                                width: vw.vw(200);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

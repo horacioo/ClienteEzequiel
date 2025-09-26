@@ -1,0 +1,96 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #hospitais {
+        padding-top: vw.vw(58.87);
+        padding-left: vw.vw(80.32);
+        padding-bottom: vw.vw(58.42);
+        padding-right: vw.vw(52.77);
+
+        display: flex;
+        flex-direction: row;
+        gap: vw.vw(47.46);
+        background-size: cover;
+        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/hospitais/imagens/fundao.jpg);
+
+        #videoDaCorretora {
+            height: vw.vw(342.68);
+            width: vw.vw(329.12);
+            display: block;
+            border-radius: vw.vw(12.52);
+            $sombra: vw.vw(6.26);
+            box-shadow: $sombra $sombra rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        #conteudo {
+            border: 1px solid #5d5d5d5c;
+            width: vw.vw(491);
+            display: flex;
+            flex-direction: column;
+            gap: vw.vw(13.04);
+            min-height: vw.vw(342.06);
+            height: auto;
+            align-items: center;
+            padding-left: vw.vw(15.65);
+            padding-right: vw.vw(15.65);
+            padding-top: vw.vw(15.65);
+            ////justify-content: center;
+            border-radius: vw.vw(6.78);
+
+            a {
+                width: vw.vw(237.65);
+                height: vw.vw(53);
+                @include buttons.botao();
+            }
+
+            img {
+                width: vw.vw(31.39);
+                height: auto;
+            }
+
+            header {
+                h2 {
+                    text-align: center;
+                    color: cores.$cor1;
+                    font-size: vw.vw(16.69);
+                    line-height: 125%;
+                    font-family: 'font2';
+                }
+            }
+
+            img {
+            }
+
+            #textos {
+                p {
+                    font-size: vw.vw(8.35);
+                    color: cores.$cor2;
+                    font-weight: 100;
+                    font-family: "light2";
+                    font-weight: lighter;
+                    margin-bottom: vw.vw(5);
+                    text-align: justify;
+                    strong {
+                        font-weight: bold;
+                    }
+
+                    em {
+                    }
+                }
+            }
+        }
+    }
+}
