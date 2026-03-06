@@ -1,0 +1,152 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #label {
+        color: white;
+        transform:  translateY(-50%);///transform: rotate(90deg) translateY(-50%);
+        position: fixed;
+        left: 0vw;///left: -3.3vw;
+        top: 50%;
+        font-family: "font1";
+        font-size: 1vw;
+        padding: 0.5vw;
+        background-color: #1b746f;
+        border-bottom-right-radius: vw.vw(5);
+        border-top-right-radius: vw.vw(5);
+        animation: piscaPisca 400ms infinite;
+        z-index: 4000000000000000000;
+    } 
+
+    #voltar {
+        display: none;
+    }
+
+    @keyframes openBlog {
+        0% {
+            left: -90vw;
+            opacity: 0;
+        }
+
+        100% {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes piscaPisca {
+        0% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .movimento {
+        animation: openBlog 500ms forwards;
+    }
+
+    #blog_links {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 90vw;
+        z-index: 500000000000000000;
+        left: -90vw;
+
+        #textoDeApresentacao {
+            top: vw.vw(7);
+            position: absolute;
+            display: block;
+            line-height: 150%;
+            padding: vw.vw(15);
+            padding-left: vw.vw(35);
+            padding-right: vw.vw(50);
+            font-family: "light1";
+            color: white;
+            text-align: justify;
+            font-size: vw.vw(9);
+            strong {
+                font-family: "font1";
+            }
+        }
+
+        header,
+        footer {
+            all: unset;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            background-color: cores.$cor1;
+            padding-right: vw.vw(48.98);
+            padding-top: vw.vw(90.01);
+            padding-bottom: vw.vw(19.28);
+            border-top-right-radius: vw.vw(10);
+            border-bottom-right-radius: vw.vw(10);
+            background-color: #1b746f;
+
+            .card {
+                width: 23%;
+                height: vw.vw(232.92);
+                background-color: #d9d9d9;
+                margin-left: vw.vw(30);
+                display: flex;
+                gap: vw.vw(9.85);
+                flex-direction: column;
+                border-radius: vw.vw(10);
+                overflow: hidden;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: vw.vw(11.99);
+                font-size: 0.8vw;
+                picture {
+                    border-radius: vw.vw(5);
+                    overflow: hidden;
+                    height: vw.vw(93.78);
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        filter: saturate(1) brightness(1.4);
+                        border: 1px solid grey;
+                    }
+                }
+                h2 {
+                    width: 100%;
+                    display: inline-block;
+                    font-family: "font2";
+                    font-size: 1vw;
+                    a {
+                        color: cores.$cor1;
+                    }
+                }
+                p {
+                    font-family: "light1";
+                }
+
+                footer {
+                    width: 100%;
+                    .btn {
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        padding: vw.vw(5);
+                        border-radius: vw.vw(5);
+                        background-color: #5d5d5d;
+                        color: white;
+                        font-family: "font2";
+                    }
+                }
+            }
+        }
+    }
+}

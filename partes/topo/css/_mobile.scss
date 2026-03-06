@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "../../../css/mixins/tipografia" as tp;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+
+@function vw($px-value) {
+    @return math.div($px-value, 1000) * 100vw;
+}
+
+@include breakpoints.respond-to("mobile") {
+    .desktop {
+        display: none;
+    }
+
+    #topoComContatos {
+        z-index: 2000;
+        position: fixed;
+        display: flex;
+        gap: vw(30.23);
+        padding: 4vw;
+        justify-content: center;
+
+        bottom: 0;
+        width: 100vw;
+        background-color: cores.$cor1;
+        font-family: "inter1";
+        @include tp.tamanhoFontes();
+        text-transform: capitalize;
+        align-items: center;
+        a {
+            color: white;
+        }
+ 
+        /***************************************/
+        .btn {
+            background-color: darken(cores.$cor1, 20%);
+            padding: 2vw;
+            border-radius: 2vw;
+            display: block;
+            width: 45vw;
+            display: flex;
+            gap: vw(20);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 29vw;
+            white-space: nowrap;
+            img {
+                width: 13vw;
+                height: auto;
+            }
+        }
+        /***************************************/
+    }
+}

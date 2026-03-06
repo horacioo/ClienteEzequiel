@@ -1,0 +1,42 @@
+@use "sass:math";
+@use "./../../../css/cores/cores" as cores;
+@use "../../../css/util/_vw.scss";
+@use "./../../../css/util/breakpoints";
+
+@function vw($px-value) {
+    @return math.div($px-value, 1000) * 100vw;
+}
+
+@include breakpoints.respond-to(bigger) {
+
+
+    .mobile{
+        display: none;
+    }
+
+
+    #topoComContatos {
+        background-color: cores.$cor1;
+        display: flex;
+        gap: vw(30.23);
+        font-family: "inter1";
+        color: white;
+        padding-left: vw(19.28);
+        text-transform: capitalize;
+        font-size: vw(10.42);
+        padding-top:vw(2.08);
+        padding-bottom:vw(2.08);
+        a {
+            color: white;
+        }
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: vw(22.17);
+        align-items: center;
+
+       
+
+    }
+}

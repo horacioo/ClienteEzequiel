@@ -22,7 +22,7 @@
       <li id="paineisComDetalhes">
         <h3>Planos Funerários</h3>
         <div id="descricaoDaOperadora">
-          O planos funerários é essencial em um momento de muita dor e sensibilidade onde o apoio financeiro é fundamental para você e seus familiares.<br><br>
+          O planos funerários são essenciais em um momento de muita dor e sensibilidade onde o apoio financeiro é fundamental para você e seus familiares.<br><br>
 
           Trabalhamos com os dois principais planos funerários do litoral, a OSAN que é um plano com uma mensalidade acessível cobrindo serviços como, traslado de corpos, preparação do corpo, velório, cerimônias religiosas e civis, além de serviços de cremação e sepultamento com mensalidade de R$ 59,90. Temos também o plano<br><br>
 

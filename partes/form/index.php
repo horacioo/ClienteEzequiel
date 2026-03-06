@@ -15,7 +15,7 @@
         Acrescente informações como idade e se tem preferência por algum plano.
       </h3>
       <meta itemprop="contactType" content="Individual/Familiar">
-      <?php echo do_shortcode('[contact-form-7 id="19fb0ae" title="Formulário de contato 1"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="b99e728" title="formulário Família"]'); ?>
 
     </div>
 
@@ -23,7 +23,7 @@
     <div id="formEmpresa" itemscope itemtype="https://schema.org/ContactPoint">
       <h2 itemprop="headline">Cote com Seu MEI ou CNPJ - Ofertas Exclusivas Para MEI e Empresas</h2>
       <meta itemprop="contactType" content="Empresarial/MEI">
-      <?php echo do_shortcode('[contact-form-7 id="19fb0ae" title="Formulário de contato 1"]'); ?>
+      <?php echo do_shortcode('[contact-form-7 id="d34c817" title="formulário empresas"]'); ?>
 
     </div>
 

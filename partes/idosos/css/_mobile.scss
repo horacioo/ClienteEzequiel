@@ -58,13 +58,24 @@
              @include buttons.botao(){};
         }
 
+        p{
+            a{
+                margin-top: 10vw;
+            }
+        }
+
         picture{
-            position: absolute;
+            position: relative;
             right: 0;
             bottom: 0;
             z-index: 4000000000;
+            height: 57vh;
             img{
+                top: -15vw;
                 display: block;
+                width: 100%;
+                height: auto;
+                position: absolute;
             }
         }
 

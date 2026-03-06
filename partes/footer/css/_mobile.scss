@@ -15,6 +15,7 @@
         transform: translateX(-50%);
         position: relative;
         padding: 5vw;
+        padding-bottom: 20vw;
         display: flex;
         flex-direction: column;
         @include tp.tamanhoFontes();
@@ -54,6 +55,7 @@
             position: relative;
             left: 50%;
             transform: translateX(-50%);
+            width: 95%;
         }
     }
 }

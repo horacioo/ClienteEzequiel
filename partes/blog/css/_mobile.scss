@@ -1,111 +1,111 @@
+@use "sass:math";
 
-@import "../../../css/reset/reset";
-@import "../../../css/mixins/heights";
-@import "../../../css/util/_breakpoints";
-@import "../../../css/variaveis/caminhos";
-@import "../../../css/variaveis/caminhos";
-@import "../../../css/util/breakpoints";
-@import "../../../css/mixins/button";
-@import "../../../css/mixins/titulos";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
 
-.screen-reader-text {
-    width: 1px;
-    overflow: hidden;
-}
+@include breakpoints.respond-to(mobile) {
+    @keyframes hoverCards {
+        0% {
+            transform: scale(0.5);
+        }
+        70% {
+            transform: scale(1.9);
+        }
+        100% {
+            transform: scale(1.3);
+            z-index: 3000;
+        }
+    }
 
-@include respond-to(mobile) {
     #blog {
-        @include Profundidade;
-        @include Profundidade;
-        margin-left: 2.9296875vw;
-        margin-right: 2.9296875vw;
-        height: auto;
         position: relative;
-        color: $cor1;
-        padding-top: 4vw;
-        padding-bottom: 3.904947916667vh;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 5vw;
+        display: flex;
+        flex-direction: column;
+        gap:3vh;
 
-        h2 {
-            margin-bottom: 1.953125vw;
-            color: darken($cor1, 15);
-            @include titulos();
-        }
-
-        #textos {
-            margin-bottom: 9vw;
-            @include tamanhoFontes();
-        }
-        ul {
+        header {
+            position: relative;
             margin: 0;
             padding: 0;
-            z-index: 200;
-            display: flex;
-            flex-direction: column;
-            gap: 1.7744140625vw;
+            h1 {
+                color: cores.$cor1;
+                @include tipografia.titulos();
+                font-family: "font2";
+                display: inline-block;
+                text-align: center;
+                padding: 0 !important;
+                font-weight:bolder;
+            } 
+        }
 
+        h2 {
+            color: cores.$cor1;
+            @include tipografia.titulos();
+            font-family: "font2";
+            text-align: center;
+        }
+
+        p {
             position: relative;
-            width: 99%;
-            left: 50%;
-            transform: translateX(-50%);
+            @include tipografia.tamanhoFontes();
+            font-family: "font1";
+            color: cores.$cor2;
+        }
 
+        #categorias {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             li {
-                min-height: 27.333984375vw;
-                padding: 1.311328125vw;
-                //border: 0.09765625vw solid #e0e0e0;
-                display: block;
-                border-radius: 1.0458984375vw;
-                gap: 1.07421875vw;
-                align-items: center;
-                flex-direction: column;
-                background-color: white;
-                width: 99%;
-                border: 1px solid $cor1;
-                margin-bottom: 4vw;
-                background-color: lighten($cor1,67%);
-               
+                width: 100%;
+                max-height: 50vh;
+                height: auto;
+                margin-bottom: vw.vw(27.08);
+                border-radius: vw.vw(10.42);
+                overflow: hidden;
+                position: relative;
+                border: 1px solid cores.$cor1;
+                position: relative;
 
-                picture {
+                #fundo {
                     width: 100%;
-                    img {
-                        width: 100%;
-                        height: auto;
-                        border: 1px solid $cor1;
-                        border-radius: 0.48828125vw;
+                    height: 50vw;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(to top, white 30%, transparent 100%);
+                }
+                a {
+                    h3 {
+                        z-index: 300000;
+                        position: absolute;
+                        color: cores.$cor1;
+                        font-family: "font3";
+                        @include tipografia.tamanhoFontes();
+                        text-transform: capitalize;
+                        bottom: 1vh;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
                 }
-                .titulo {
-                    color: darken($cor1, 15);
-                    margin-bottom: 3vw;
-                    display: block;
-                    text-align: center;
-                    font-size: 5vw;
-                    font-family: "font3";
-                    @include titulos2();
-                    font-weight: normal;
-                    text-transform: capitalize;
-                    
-                }
-                .descricao {
-                    color: darken($cor1, 5);
-                    line-height: 7vw;
-                    text-align: justify;
-                    font-size: 3vw;
-                    margin-bottom: 3vh;
-                    display: block;
-                    @include tamanhoFontes();
-                    
-                }
-
-                .button {
-                    background-color: $cor1;
-                    padding: 2%;
-                    color: white;
-                    border-radius: 0.29296875vw;
-                    width: 100%;
-                    align-items: center;
-                    text-align: center;
-                    display: block;
-                    margin-top: 4vw;
+                img {
+                    width: auto;
+                    height: 130%;
+                    position: relative;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    filter: opacity(1) saturate(0.3) brightness(1);
+                    z-index: -2;
                 }
             }
         }

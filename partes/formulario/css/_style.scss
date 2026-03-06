@@ -1,0 +1,27 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+/******Vou pegar o css do topo************/
+@use "../../topo/css/desktop";
+/*****************************************/
+
+@function vwx($px-value) {
+    @return math.div($px-value, 1000) * 100vw;
+}
+
+@include breakpoints.respond-to(bigger) {
+    #formulario {
+        position: relative;
+        border: 1px solid red;
+        display: block;
+        width: 100%;
+        width: vwx(708.79);
+        top: vwx(90);
+    }
+} 

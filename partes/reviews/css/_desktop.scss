@@ -15,6 +15,14 @@
         background-size: cover;
         background-image: url(#{c.$url}/wp-content/themes/ezequiel/partes/reviews/imagens/fundao.jpg);
         /***************************************************/
+ 
+        /****************************************************/
+        @keyframes opacidades {
+            0%{opacity: 1;}
+            50%{opacity: 0.2;}
+            100%{ opacity: 1;}
+        }
+        /****************************************************/
         #arrowLeft,
         #arrowRight {
             position: absolute;
@@ -22,7 +30,8 @@
             height: vw.vw(71.68);
             width: vw.vw(57.556);
             z-index: 5000;
-             cursor: pointer;
+            cursor: pointer;
+            animation: opacidades 1400ms infinite; 
         }
         #arrowLeft {
             left: vw.vw(90.15);

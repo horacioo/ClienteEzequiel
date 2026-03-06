@@ -1,94 +1,81 @@
-console.log("só teste");
+console.log("Slick atribuições carregado");
 
-/*
-jQuery('#slide1Topo').slick({
-    dots: false,          // Mostra bolinhas de navegação
-    infinite: true,      // Loop infinito
-    speed: 500,          // Velocidade da transição
-    slidesToShow: 3,     // Quantos slides aparecem por vez
-    slidesToScroll: 1,   // Quantos slides passam por vez
-    autoplay: true,      // Ativar autoplay
-    autoplaySpeed: 2000, // Tempo do autoplay (ms)
-    arrows: true         // Setas de navegação
-  });
-  */
+jQuery(document).ready(function () {
 
-jQuery("#slide1Topo").slick({
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: true,
 
-  // Adicionando a opção 'responsive'
-  responsive: [
-    {
-      breakpoint: 768, // Quando a tela for menor que 767px
-      settings: {
-        slidesToShow: 1, // Mostra 1 slide por vez
-        slidesToScroll: 1, // E rola 1 slide por vez
-      },
-    },
-  ],
-});
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+// Executa assim que o documento carregar
 
-jQuery("#slide2Ul").slick({
-  dots: false, // Mostra bolinhas de navegação
+    gerenciarMenu();
+
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+
+
+
+
+jQuery("#logosDasOperadorasHeader").slick({
+  dots: true, // Mostra bolinhas de navegação
   infinite: true, // Loop infinito
-  speed: 500, // Velocidade da transição
-  slidesToShow: 3, // Quantos slides aparecem por vez
+  speed: 4000, // Velocidade da transição
+  slidesToShow: 2, // Quantos slides aparecem por vez
   slidesToScroll: 1, // Quantos slides passam por vez
   autoplay: true, // Ativar autoplay
-  autoplaySpeed: 2000, // Tempo do autoplay (ms)
-  arrows: true, // Setas de navegação
+  autoplaySpeed: 1000, // Tempo do autoplay (ms)
+  arrows: false, // Setas de navegação
 
-  // Adicionando a opção 'responsive'
   responsive: [
     {
-      breakpoint: 768, // Quando a tela for menor que 768px
+      breakpoint: 786, // abaixo de 786px
       settings: {
-        slidesToShow: 1, // Mostra 1 slide por vez
-        slidesToScroll: 1, // E rola 1 slide por vez
+        slidesToShow: 1, // mostra apenas 1 slide
+        slidesToScroll: 1,
       },
     },
   ],
 });
 
-jQuery("#slideDeProdutos").slick({
-  ///dots: true,          // Mostra bolinhas de navegação
-  infinite: true, // Loop infinito
-  speed: 500, // Velocidade da transição
-  //slidesToShow: 3,     // Quantos slides aparecem por vez
-  //slidesToScroll: 1,   // Quantos slides passam por vez
-  autoplay: true, // Ativar autoplay
-  autoplaySpeed: 2000, // Tempo do autoplay (ms)
-  arrows: true, // Setas de navegação
+
+
+
+
+
+jQuery("#MenuHambruguer").click(function(){
+  jQuery("#menu").addClass("menuAnda").show();
+  jQuery("#menu").children("#fundo").addClass("fundoMenu").show();
 });
 
-$(".listaDosDepoimentos").slick({
-  dots: false,
-  infinite: true,
-  speed: 3000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000, // Tempo do autoplay (ms)
-  arrows: true,
-  // USE STRING SELECTORS (mais robusto)
-  prevArrow: "#arrowLeft",
-  nextArrow: "#arrowRight",
-  responsive: [{ breakpoint: 900, settings: { slidesToShow: 1 } }],
+jQuery("#fundo").click(function(){
+  jQuery("#menu").hide();
 });
 
-jQuery(".resposta").hide();
+jQuery("#menu").children("ul").children("li").children('a').click(function(){
+  jQuery("#menu").hide();
+});
 
-jQuery("#listaDePerguntas")
-  .children("li")
-  .click(function () {
-    jQuery(".resposta").hide();
-    jQuery(".resposta").removeClass("apareceResposta");
-    jQuery(this).children(".resposta").show().addClass("apareceResposta");
-  });
+
+
+
+})
+
+
+
+
+
+
+function gerenciarMenu() {
+    var larguraTela = jQuery(window).width();
+
+    if (larguraTela < 768) {
+        jQuery("#menu").hide(); // Esconde se for mobile/tablet pequeno
+        localStorage.setItem("abreMenu",1);
+    } else {
+        jQuery("#menu").show(); // Garante que apareça no desktop
+        localStorage.setItem("abreMenu",0);
+        jQuery("#MenuHambruguer").hide();
+    }
+}

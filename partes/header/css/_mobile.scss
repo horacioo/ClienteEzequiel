@@ -7,61 +7,65 @@
 @use "../../../css/mixins/tipografia" as tp;
 @use "../../../css/util/_vw.scss";
 
-@mixin marginBottom {
-    margin-bottom: 7vw;
-}
+/******Vou pegar o css do topo************/
+@use "../../topo/css/mobile";
+/*****************************************/
 
 @include breakpoints.respond-to("mobile") {
-    body {
-        background-image: url(#{c.$url}wp-content/themes/ezequiel/img/fundoMobile.webp);
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh; /* ocupa 100% da altura da tela */
-    }
-
     #header {
-        overflow: hidden;
-        width: 98vw;
-        left: 50%;
-        transform: translateX(-50%);
-        position: relative;
-        padding: 5vw;
+        padding: 10vw;
+        padding-top: 2vw;
+        @include tp.tamanhoFontes();
+        color: cores.$cor1;
+        font-family: "font4";
         display: flex;
         flex-direction: column;
-        @include tp.tamanhoFontes();
+        gap: 5vw;
 
         h1,
         h2 {
-            color: cores.$cor1;
-            font-family: "font2";
-            @include marginBottom();
-            @include tp.titulos();
-        }
-        font-family: "font1";
-        color: cores.$cor2;
-        a {
-            @include buttons.botao();
+            font-family: "inter2";
+            font-size: 7vw;
+            line-height: 120%;
+            width: 100%;
+            display: block;
         }
 
-        /********************************************/
+        h1 {
+            font-size: 16vw;
+        }
 
-        #slide1Topo,
-        #slide2Ul {
-            height: auto;
-            @include marginBottom();
+        #btn {
+            background-color: cores.$cor1;
+            color: white;
+            font-family: "inter2";
+            padding: 5vw;
+            display: block;
+            border-radius: 3vw;
+            position: relative;
+            text-transform: capitalize;
             img {
-                height: 14vw;
-                display: block;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
+                position: absolute;
+                top: 4vw;
+                right: 4vw;
             }
         }
+
         picture {
+            width: 100%;
+            height: auto;
+            display: block;
             img {
-                max-width: 99%;
+                max-width: 100%;
                 height: auto;
+            }
+        }
+
+        ul{
+            li{
+                img{
+                    width: 100%;
+                }
             }
         }
     }

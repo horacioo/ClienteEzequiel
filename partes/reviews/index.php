@@ -136,7 +136,7 @@
     <!-------------------------------------------------->
   </ul>
 
-  <img id="arrowLeft" src="<?php echo tema ?>/partes/reviews/imagens/arrow-left-planos-de-saude-na-baixadasantista.svg">
-  <img id="arrowRight" src="<?php echo tema ?>/partes/reviews/imagens/arrow-direita-planos-de-saude-na-baixada-santista.svg">
+  <img id="arrowLeft" title="planos de saúde no litoral" alt="ícone de navegação dos  depoimentos" src="<?php echo tema ?>/partes/reviews/imagens/arrow-left-planos-de-saude-na-baixadasantista.svg">
+  <img id="arrowRight" title="planos de saúde no litoral" alt="ícone de navegação dos  depoimentos"  src="<?php echo tema ?>/partes/reviews/imagens/arrow-direita-planos-de-saude-na-baixada-santista.svg">
 
 </section>

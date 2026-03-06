@@ -7,239 +7,140 @@
 @use "../../../css/mixins/tipografia";
 @use "../../../css/util/_vw.scss";
 
+
+
+/******Vou pegar o css do topo************/
+@use "../../topo/css/desktop";
+/*****************************************/
+
+
 @function vw($px-value) {
     @return math.div($px-value, 1000) * 100vw;
 }
 
 @include breakpoints.respond-to(bigger) {
     #header {
-        background-size: cover;
+        
+        z-index: 20;
         position: relative;
-        background-image: url(#{c.$url}wp-content/themes/ezequiel/partes/header/imagens/fundao.jpg);
-        width: vw(1000);
-        height: vw(587);
+        width: 100vw;
+        height: vw(451);
         display: block;
-        overflow: hidden;
-
-        a {
-            position: absolute;
-            top: vw.vw(368.67);
-            left: vw.vw(405.7);
-
-            width: vw.vw(121.65);
-            height: vw.vw(53.09);
-            z-index: 4000;
-            @include buttons.botao();
-        }
-
-        picture {
-            position: absolute;
-            left: vw(460.03);
-            top: vw(68.85);
-            width: vw(555.48);
-            height: vw(524.19);
-            display: block;
-            img {
-                width: 100%;
-                height: auto;
-                display: block;
-                object-fit: cover;
-                bottom: 0;
-                position: absolute;
-            }
-        }
-
+        
+        /******************************************/
         h1 {
             position: absolute;
-            top: vw(32);
-            left: vw(125.09);
+            top: vw(68.79);
+            left: vw(146.44);
+            font-size: vw(32.31);
+            line-height: 102%;
+            width: vw(315.81);
+            height: vw(70.35);
+            display: block;
             color: cores.$cor1;
-            width: vw(413.48);
-            font-size: vw(39.66);
-            text-align: left;
-            font-family: "font1";
-            font-weight: normal;
-            strong {
-                font-family: "font2";
-                font-size: vw(44.41);
-            }
-            line-height: 109%;
+            font-family: "inter2";
+            //text-transform: capitalize;
         }
+        /******************************************/
 
-        #slide {
+        h2 {
             position: absolute;
-            left: vw(125.09);
-            top: vw(142.09);
-            width: vw(333.81);
-            height: vw(38.6);
-            ul {
-                left: vw(10.7);
-                top: vw(7.29);
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                li {
-                    img {
-                        height: vw(24.01);
-                        width: auto;
-                    }
-                }
-            }
-        }
-
-        #slide2 {
-            position: absolute;
-            left: vw(125.09);
-            top: vw(268.69);
-            width: vw(333.81);
-            height: vw(38.6);
-            ul {
-                left: vw(10.7);
-                top: vw(7.29);
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                li {
-                    img {
-                        height: vw(24.01);
-                        width: auto;
-                    }
-                }
-            }
-        }
-
-        P {
-            position: absolute;
-            left: vw(125.09);
-            top: vw(203.69);
-            color: cores.$cor2;
-            width: vw(334.33);
-            height: vw(42);
-            font-size: vw(10.89);
-            line-height: 133%;
-            font-family: "font3";
-            font-weight: bold;
-            text-align: justify;
-        }
-
-        #cnpjOuMei {
-            position: absolute;
-
-            left: vw(143.87);
-            top: vw(336.5);
-
-            width: vw(386.36);
-            height: vw(23);
-
-            font-size: vw(23.41);
-
-            text-align: left;
+            width: vw(315.81);
             color: cores.$cor1;
-
-            color: cores.$cor1;
+            line-height: 124%;
+            left: vw(146.44);
+            top: vw(160.51);
+            font-size: vw(9.9);
             font-family: "font4";
-            line-height: 100%;
-            letter-spacing: 0;
-            $bbbx: vw(2.09);
-            text-shadow: $bbbx $bbbx rgba(0, 0, 0, 0.18);
+            font-weight: 100;
+            text-transform: uppercase;
         }
-
-        #listaDeDados {
-            color: cores.$cor2;
+        /******************************************/
+        #btn {
+            background-color: lighten(cores.$cor1, 10%);
             position: absolute;
-
-            left: vw(165); //left: vw(143.87);
-            top: vw(373.11);
-
-            width: vw(340.45);
-            height: vw(100.43);
-            //190
-            li {
-                font-size: vw(10.37);
-                font-weight: bold;
-                line-height: 174%;
-                text-align: left;
-                list-style: circle;
-                line-height: 174%;
-                font-family: "font2";
+            top: vw(219.4);
+            height: vw(82.86);
+            width: vw(315.81);
+            display: flex;
+            color: white;
+            font-size: vw(12.51);
+            left: vw(146.44);
+            align-items: center;
+            text-transform: capitalize;
+            border-radius: vw(7.82);
+            font-family: "font4";
+            text-transform: uppercase;
+            position: relative;
+            padding-left: vw(11.76);
+            img {
+                position: absolute;
+                width: vw(41.69);
+                height: auto;
+                top: vw(17.72);
+                right: vw(11.76);
             }
         }
-
-        #texto1 {
+        /******************************************/
+        p {
+            width: vw(315.81);
             position: absolute;
-            left: vw(125.09);
-            font-size: vw(18.25);
-            font-family: "font3";
-            top: vw(484.26);
-            left: vw(125.9);
-            z-index: 30000;
-            width: vw(612.71);
-            line-height: 151%;
-            color: cores.$cor2;
+            left:vw(146.44);
+            font-size: vw(8.2);
+            line-height: 191%;
+            color: cores.$cor1;
+            font-family: "font5";
+            top: vw(323.63);
+            
         }
-
-        .container {
-            width: vw(430.22);
-            display: grid;
-            grid-auto-rows: auto; // cada item ocupa altura automática
-            row-gap: vw(29); //row-gap: 2.24609375vw; // espaçamento apenas ENTRE linhas (sem antes do 1º)
-            left: vw(125.09);
-            top: vw(32);
+        /******************************************/
+        #logosDasOperadorasHeader {
             position: absolute;
-
-            #slide,
-            #slide2 {
-                width: vw(333.81);
-                ul {
-                    li {
-                        line-height: 0;
-                        img {
-                            width: auto;
-                            height: vw(27.13);
-                            object-fit: cover;
-                            display: block;
-                        }
-                    }
+            top: vw(360.63);
+            left: vw(146.44);
+            height: vw(40.92);
+   
+            display: flex;
+            gap: vw(12);
+            width: 32vw;
+            li{
+                img{
+                    height: 99%;
+                    width: 75%;
+                    max-height: 99%;
                 }
             }
-
-            p {
-                font-family: "font3";
-                font-size: vw(10.89);
-                line-height: 133%;
-                text-align: justify;
-                color: cores.$cor2;
-                width: vw(334.33);
-            }
-
-            #caracteristicas {
-                width: vw(418.83);
-                display: grid;
-                row-gap: vw(9.39);
-                padding-left: vw(18.78);
-                padding-bottom: vw(16.69);
-                h2 {
-                    font-size: vw(23.41);
-                    font-family: "font1";
-                    color: cores.$cor1;
-                }
-                ul {
-                    li {
-                        list-style: circle;
-                        font-size: vw(10.37);
-                        line-height: 174%;
-                        font-family: "font3";
-                        color: cores.$cor2;
-                    }
-                }
-            }
-
-            #texto1 {
-                font-family: "font2";
-                color: cores.$cor2;
-                font-size: vw(18.25);
-                z-index: 30;
-                width: vw(613);
+        }
+        /******************************************/
+        .divisor {
+            position: absolute;
+            top: vw(416.91);
+            left: vw(146.44);
+            color: cores.$cor1;
+            //-------------------
+            //border: none; /* remove padrão do navegador */
+            height: vw(1);
+            width: vw(315.81);
+            display: block;
+            background-color: cores.$cor1;
+            padding: 0;
+            margin: 0;
+        }
+        /******************************************/
+        picture {
+            position: absolute;
+            left: vw(523.44);
+            top: vw.vw(108.4);
+            display: block;
+            width: vw(3);
+            height: vw(3);
+            img {
+                top: 0;
+                left: 0;
+                position: absolute;
+                object-fit: contain;
+                width: vw(336.14);
+                height: vw(331.45);
             }
         }
     }

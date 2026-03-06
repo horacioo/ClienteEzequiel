@@ -29,7 +29,7 @@
 
   <p id="pa3">
     Central de atendimento: 
-    <a href="tel:+5513996144791" itemprop="telephone"> 99614-4791</a>
+    <a href="tel:+5513996144791" itemprop="telephone">(13)99614-4791</a>
   </p>
 
 

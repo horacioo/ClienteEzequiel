@@ -19,9 +19,9 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
-            src="<?php echo tema ?>/partes/slide/imagens/empresas-de-segurp-de-vida.png">
+            width="770"
+            height="58"
+            src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-vida.png">
         </picture>
 
         <a href="#" itemprop="url">Saiba Mais</a>
@@ -32,8 +32,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="809"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/familia-seguro-de-vida.png">
         </picture>
 
@@ -77,8 +77,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -90,8 +90,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="809"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -130,8 +130,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -143,8 +143,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="809"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-viagens.png">
         </picture>
 
@@ -171,15 +171,15 @@
         </header>
 
         <p itemprop="description">
-         Protegem o patrimônio contra diversos riscos, como roubo, incêndio e outros desastres: </p>
+          Protegem o patrimônio contra diversos riscos, como roubo, incêndio e outros desastres: </p>
 
         <picture id="empresas">
           <img
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -191,8 +191,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="799"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-danos-pessoais.png">
         </picture>
 
@@ -224,8 +224,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -237,8 +237,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="796"
+            height="498"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-residencial.png">
         </picture>
 
@@ -277,8 +277,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -290,8 +290,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="626"
+            height="400"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-auto.png">
         </picture>
 
@@ -323,8 +323,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -336,8 +336,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="721"
+            height="491"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-patrimonial.png">
         </picture>
 
@@ -374,8 +374,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -387,8 +387,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="919"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/seguro-empresarial.png">
         </picture>
 
@@ -402,7 +402,7 @@
     <!---------------------------------------------------------------------------->
 
 
-    
+
 
 
 
@@ -423,8 +423,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -436,8 +436,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="739"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/responsabilidade-civil.png">
         </picture>
 
@@ -472,8 +472,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -485,8 +485,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="812"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/previdencia-privada.png">
         </picture>
 
@@ -500,7 +500,7 @@
     <!---------------------------------------------------------------------------->
 
 
-    
+
 
 
 
@@ -528,8 +528,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -541,8 +541,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="441"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/consorcio-porto.png">
         </picture>
 
@@ -559,7 +559,7 @@
 
 
 
-    
+
 
 
     <!---------------------------------------------------------------------------->
@@ -579,8 +579,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -592,8 +592,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="687"
+            height="502"
             src="<?php echo tema ?>/partes/slide/imagens/consorcio-de-servicos.png">
         </picture>
 
@@ -631,8 +631,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -644,8 +644,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="904"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/consorcio-de-eletrodomesticos-e-moveis.png">
         </picture>
 
@@ -678,8 +678,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="835"
+            height="58"
             src="<?php echo tema ?>/partes/slide/imagens/empresas-de-seguro-de-acidentes-pessoais.png">
         </picture>
 
@@ -691,8 +691,8 @@
             itemprop="image"
             alt="seguro de vida em santos"
             title="planos de saude na baixada santista"
-            width="200"
-            height="200"
+            width="776"
+            height="520"
             src="<?php echo tema ?>/partes/slide/imagens/consorcio-tecnologico.png">
         </picture>
 
@@ -706,6 +706,11 @@
     <!---------------------------------------------------------------------------->
 
   </ul>
+
+
+
+  <img width="58" height="72" id="arrowLeftX" title="planos de saúde no litoral"  alt="ícone de navegação dos produtos" src="<?php echo tema ?>/partes/slide/imagens/arrow-left-planos-de-saude-na-baixadasantista.svg">
+  <img width="58" height="72" id="arrowRightX" title="planos de saúde no litoral" alt="ícone de navegação dos produtos" src="<?php echo tema ?>/partes/slide/imagens/arrow-direita-planos-de-saude-na-baixada-santista.svg">
 
 
 

@@ -20,6 +20,11 @@
         @include tp.tamanhoFontes();
         ///border-bottom: 1px solid cores.$cor1;
 
+
+         .linkSimples{
+            all:unset;
+         }
+
         h1,
         h2 {
             color: cores.$cor1;

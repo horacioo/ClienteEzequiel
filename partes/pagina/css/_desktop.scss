@@ -1,0 +1,143 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@forward "../../footer/css/_style.scss";
+
+@include breakpoints.respond-to(bigger) {
+    body {
+        display: grid;
+        grid-template-columns: vw.vw(62.51) vw.vw(576.11) vw.vw(72.4) vw.vw(249.51); //grid-template-columns: repeat(8, 1fr);
+
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". content . side "
+            ". content . side"
+            "foot foot foot foot ";
+        padding: 0;
+
+        footer {
+            width: 100vw;
+        }
+    }
+
+    aside {
+        grid-area: side;
+        padding-top: vw.vw(10);
+        section {
+            margin-bottom: vw.vw(10);
+            height: vw.vw(184.4);
+            border-radius: vw.vw(10.42);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid cores.$cor2;
+
+            h2 {
+                a {
+                    color: white;
+                }
+            }
+            #outros {
+                position: absolute;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.85);
+                padding: vw.vw(10);
+                color: cores.$cor1;
+                font-family: "font1";
+                font-size: vw.vw(7);
+                line-height: 150%;
+                a {
+                    color: cores.$cor1;
+                }
+                h3 {
+                    font-size: vw.vw(12);
+                    text-transform: capitalize;
+                    margin-bottom: vw.vw(5);
+                }
+            }
+            img {
+                min-height: 100%;
+                height: auto;
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                filter: grayscale(1);
+            }
+        }
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+    #thumb {
+        grid-area: thumb;
+        overflow: hidden;
+        position: relative;
+        height: vw.vw(150);
+        border-bottom-left-radius: vw.vw(10);
+        border-bottom-right-radius: vw.vw(10);
+        img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #page {
+        position: relative;
+        margin-left: vw.vw(93);
+        display: flex;
+        flex-direction: column;
+        grid-area: content;
+        padding-bottom: vw.vw(30);
+        gap: vw.vw(25);
+
+        p{
+            margin-bottom: 1vw;
+        }
+
+        h1 {
+            color: cores.$cor1;
+            font-size: vw.vw(29.72);
+            line-height: 125%;
+            font-family: "font2";
+        }
+
+        #content {
+            color: cores.$cor2;
+            font-family: "light1";
+            line-height: 166%;
+            font-weight: 200;
+            a {
+                font-weight: bolder !important;
+                color: cores.$cor1;
+                border-bottom: 0.2vw solid cores.$cor1;
+                text-transform: uppercase;
+            }
+            
+            img{
+               filter: saturate(0.1);
+               &:hover{
+                filter: saturate(1);
+               }
+            }
+
+            a,
+            strong {
+                //color: darken(cores.$cor2, 10%);
+            }
+        }
+    }
+}

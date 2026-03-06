@@ -9,6 +9,7 @@
 
 @include breakpoints.respond-to(bigger) {
     #faq {
+        z-index: 3000;
         width: 100%;
         height: vw.vw(467.58);
         padding-left: vw.vw(79.8);
@@ -93,8 +94,9 @@
                 li {
                     position: relative;
                     h4 {
-                        font-family: "light2";
+                        font-family: "font1";
                         font-weight: 500;
+                        max-width: 97%;
                     }
                     $bbbes: vw.vw(0.52);
                     border: $bbbes solid #a8a8a8;
@@ -109,6 +111,7 @@
                     color: cores.$cor1;
                     line-height: 166%;
                     border-radius: vw.vw(3.14);
+                    background-color: white;
                     ul,
                     div {
                         $csd: vw.vw(0.52);
@@ -122,6 +125,13 @@
                         padding-top: vw.vw(4.17);
                         padding-bottom: vw.vw(4.17);
                         border-radius: vw.vw(3.65);
+                        background-color: white;
+                        width: 40vw;
+                        position: absolute;
+                        left: 30vw;
+                        top: -50%;
+                        z-index: 300000000000000000000000;
+                        box-shadow: vw.vw(5)  vw.vw(5) vw.vw(6) rgba(0, 0, 0, 0.424);
                     }
                 }
             }

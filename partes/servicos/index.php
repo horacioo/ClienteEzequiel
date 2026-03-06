@@ -9,6 +9,10 @@
 
   <div id="cards">
     <ul>
+
+
+
+
       <!-- Serviço 1 -->
       <li itemscope itemtype="https://schema.org/Service" itemprop="hasOfferCatalog">
         <article>
@@ -21,9 +25,11 @@
           <p itemprop="description">
             O plano odontológico garante cuidados essenciais para sua saúde bucal, oferecendo cobertura completa com praticidade e economia para você e sua família sorrirem com confiança.
           </p>
-          <a href="#" itemprop="url">Mais Informações</a>
+          <a href="https://api.whatsapp.com/send?phone=55011979753569"  title="mais informações sobre planos de saúde na  baixada  santista"  target="_blank" itemprop="url">Mais Informações</a>
         </article>
       </li>
+
+
 
       <!-- Serviço 2 -->
       <li itemscope itemtype="https://schema.org/Service" itemprop="hasOfferCatalog">
@@ -37,10 +43,11 @@
           <p itemprop="description">
             O plano funerário oferece segurança e tranquilidade em momentos delicados, garantindo apoio completo para sua família com organização e respeito.
           </p>
-          <a href="#" itemprop="url">Mais Informações</a>
+          <a href="https://api.whatsapp.com/send?phone=55011979753569"  title="mais informações sobre planos de saúde na  baixada  santista"  target="_blank" itemprop="url">Mais Informações</a>
         </article>
       </li>
 
+      
       <!-- Serviço 3 -->
       <li itemscope itemtype="https://schema.org/Service" itemprop="hasOfferCatalog">
         <article>
@@ -53,7 +60,7 @@
           <p itemprop="description">
             Proteja o que é mais importante: sua vida, família, casa ou veículo. Com nossos seguros, você garante proteção e tranquilidade sob medida para cada necessidade.
           </p>
-          <a href="#" itemprop="url">Mais Informações</a>
+          <a href="https://api.whatsapp.com/send?phone=55011979753569"  title="mais informações sobre planos de saúde na  baixada  santista" target="_blank" itemprop="url">Mais Informações</a>
         </article>
       </li>
 
@@ -69,7 +76,7 @@
           <p itemprop="description">
             O consórcio Porto é a solução inteligente para conquistar seu carro, imóvel ou bem desejado, com parcelas acessíveis e planejamento financeiro seguro.
           </p>
-          <a href="#" itemprop="url">Mais Informações</a>
+          <a href="https://api.whatsapp.com/send?phone=55011979753569"  title="mais informações sobre planos de saúde na  baixada  santista"  target="_blank" itemprop="url">Mais Informações</a>
         </article>
       </li>
     </ul>

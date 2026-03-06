@@ -1,0 +1,9 @@
+@use "./../css/cores/cores";
+@forward "./../partes/footer/css/style";
+
+#page {
+    color: cores.$cor1;
+    line-height: 150%;
+    font-size: 1vw;
+    padding: 1vw;
+}

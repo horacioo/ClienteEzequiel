@@ -28,7 +28,10 @@
             justify-content: center;
             border-radius: vw.vw(6.26);
             position: relative;
-            left: vw.vw(144.48);
+            //left: vw.vw(144.48);
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'font1';
         }
 
         #MeusForms {
@@ -109,6 +112,15 @@
                                 height: vw.vw(21);
                                 border-radius: vw.vw(2.85);
                                 width: vw.vw(200);
+                                color: cores.$cor1;
+                                padding: 1vw;
+                            }
+                            select{
+                                border: 1px solid cores.$cor1;
+                                height: vw.vw(21);
+                                border-radius: vw.vw(2.85);
+                                width: vw.vw(200);
+                                color: cores.$cor1;
                             }
                         }
                     }

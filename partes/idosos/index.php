@@ -10,14 +10,14 @@
     </p>
 
     <p>
-      Com os <strong>planos de saúde</strong> <strong>Trasmontano</strong> e <strong>Blue Life</strong>, você tem a certeza de que eles terão 
-      <span itemprop="offers"><strong>atendimento rápido</strong>, <strong>médicos especializados</strong>, <strong>hospitais de referência</strong></span> 
-      e <strong>coberturas pensadas para essa fase da vida</strong>. É oferecer não apenas consultas e exames, mas também 
+      Com os <strong>planos de saúde</strong> <strong>Trasmontano</strong> e <strong>Blue Life</strong>, você tem a certeza de que eles terão
+      <span itemprop="offers"><strong>atendimento rápido</strong>, <strong>médicos especializados</strong>, <strong>hospitais de referência</strong></span>
+      e <strong>coberturas pensadas para essa fase da vida</strong>. É oferecer não apenas consultas e exames, mas também
       <strong>segurança, dignidade e qualidade de vida</strong>.
     </p>
 
     <p>
-      Imagine a tranquilidade de saber que, diante de qualquer imprevisto, seus entes queridos terão acesso imediato ao que há de melhor em cuidados médicos. 
+      Imagine a tranquilidade de saber que, diante de qualquer imprevisto, seus entes queridos terão acesso imediato ao que há de melhor em cuidados médicos.
       <em>Sem filas intermináveis, sem burocracia, sem esperas desnecessárias.</em>
     </p>
 
@@ -31,14 +31,16 @@
   </div>
 
   <p>
-    <a href="#" class="cta" itemprop="url">Solicite Cotação</a>
+    <a href="https://api.whatsapp.com/send?phone=55011979753569" target="_blank" title="saiba mais sobre planos de saúde na baixada santista" class="cta" itemprop="url">Solicite Cotação</a>
   </p>
 
   <picture>
-    <img width="200" height="200" 
-         src="<?php echo tema ?>/partes/idosos/imagens/homem de idade.png" 
-         alt="Corretora apresentando planos de saúde para idosos" 
-         itemprop="image">
+     <source media="(max-width: 300px)" srcset="<?php echo tema ?>/partes/idosos/imagens/webp/homem de idade-300.webp">
+    <source media="(max-width: 500px)" srcset="<?php echo tema ?>/partes/idosos/imagens/webp/homem de idade-500.webp">
+    <source media="(max-width: 768px)" srcset="<?php echo tema ?>/partes/idosos/imagens/webp/homem de idade-768.webp">
+    <source media="(max-width: 1024px)" srcset="<?php echo tema ?>/partes/idosos/imagens/webp/homem de idade-1024.webp">
+    <source media="(max-width: 1366px)" srcset="<?php echo tema ?>/partes/idosos/imagens/webp/homem de idade-1366.webp">
+    <img width="200" height="200" src="<?php echo tema ?>/partes/idosos/imagens/webp/homem de idade.webp" alt="Corretora apresentando planos de saúde para idosos" itemprop="image">
   </picture>
 
 </section>

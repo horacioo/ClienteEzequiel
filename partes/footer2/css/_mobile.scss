@@ -1,0 +1,39 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia" as tp;
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to("mobile") {
+    #foot2 {
+        all: unset;
+        display: block;
+        z-index: 200000000000000000000000;
+        background-color: #616161;
+        position: fixed;
+        width: 100vw;
+        min-height: 5vh;
+        bottom: 0vh;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            li {
+                a {
+                    @include tp.tamanhoFontes(); 
+                    color: white;
+                    display: block;
+                    background-color: cores.$cor1;
+                    padding: 3vw;
+                    border-radius:2vw ;
+                    font-family: 'font1';
+                }
+            }
+        }
+    }
+}

@@ -77,11 +77,7 @@
         }
 
     </script>
-
-
-
      <!----------chamando os arquivos de fontes----------------->
-
      <?php echo get_template_part( 'fontes' )?>
 
 
@@ -96,32 +92,15 @@
 
     <style>
 
-        <?php echo file_get_contents(tema . "/css/page.css");
+        <?php //echo file_get_contents(tema . "/css/page.css");
 
-        if (is_single()) {
-
-            echo file_get_contents(tema . "/css/single.css");
-
-        }
-
-
+        if(is_single()) { echo file_get_contents(tema . "/css/single.css");  }
+        if(is_page())   { echo file_get_contents(tema . "/styles/pagina.css");  }
 
         ?>
-
     </style>
 
 
-
     <?php wp_head(); ?>
-
-
-
-
-
-
-
 </head>
-
-
-
 <body class='wrapper'>

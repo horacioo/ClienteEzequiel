@@ -1,0 +1,39 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@function vw2($px-value) {
+    @return math.div($px-value, 1000) * 100vw;
+}
+
+@include breakpoints.respond-to(bigger) {
+    #menu {
+        z-index: 3000;
+        position: absolute;
+        top: vw2(76.09);
+        left: vw2(526.92);
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: vw2(32.83);
+            font-size: vw2(10.42);
+            font-family: "inter1";
+            font-weight: 100;
+            color: cores.$cor1;
+            li {
+                text-transform: capitalize;
+                a {
+                    text-transform: capitalize;
+                    color: cores.$cor1;
+                    font-weight: 100;
+                    &:hover{text-decoration: underline;}
+                }
+            }
+        }
+    }
+}

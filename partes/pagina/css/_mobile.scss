@@ -1,0 +1,150 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@forward "../../footer/css/_style.scss";
+
+@include breakpoints.respond-to(mobile) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: auto;
+        grid-template-areas:
+            " content content "
+            " side side"
+            "foot foot ";
+        padding: 0;
+
+        footer {
+            width: 100vw;
+        }
+    }
+
+    aside {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        grid-area: side;
+        padding-top: vw.vw(10);
+        margin-bottom: 5vw;
+        section {
+            margin-bottom: 3vw;
+            height: 50vh;
+            border-radius: vw.vw(10.42);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid cores.$cor2;
+
+            h2 {
+                @include tipografia.titulos();
+                a {
+                    color: white;
+                }
+            }
+            #outros {
+                position: absolute;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.85);
+                padding: vw.vw(10);
+                color: cores.$cor1;
+                font-family: "font1";
+                //@include tipografia.tamanhoFontes();
+                font-size: 2.4vw;
+                line-height: 200%;
+                width: 100%;
+                padding: 3vw;
+                a {
+                    color: cores.$cor1;
+                }
+                h3 {
+                    text-transform: capitalize;
+                    margin-bottom: vw.vw(5);
+                    @include tipografia.titulos();
+                    width: 100%;
+                }
+            }
+            img {
+                min-height: 100%;
+                height: auto;
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                filter: grayscale(1);
+            }
+        }
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+    #thumb {
+        grid-area: thumb;
+        overflow: hidden;
+        position: relative;
+        height: 60vh;
+        border-bottom-left-radius: vw.vw(50);
+        border-bottom-right-radius: vw.vw(50);
+        top: -5vw;
+        img {
+            width: auto;
+            min-height: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #page {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-area: content;
+        padding: 5vw;
+        width: 99%;
+        gap: 3vh;
+        h1 {
+            color: cores.$cor1;
+            @include tipografia.titulos();
+            font-family: "font2";
+        }
+
+        #content {
+            color: cores.$cor2;
+            font-family: "light1";
+            @include tipografia.tamanhoFontes();
+            p {
+                text-align: justify;
+                margin-bottom: 2vw;
+
+                a {
+                    font-weight: bolder!important;
+                    color: cores.$cor1;
+                    border-bottom: 0.3vw solid cores.$cor1 ;
+                    text-transform: uppercase;
+                }
+            }
+
+             img{
+               filter: saturate(0.1);
+               max-width: 100%;
+               height: auto;
+            }
+
+
+            a,
+            strong {
+                //color: darken(cores.$cor2, 10%);
+            }
+        }
+    }
+}

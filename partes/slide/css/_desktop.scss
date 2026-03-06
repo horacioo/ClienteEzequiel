@@ -16,14 +16,38 @@
         padding-top: vw.vw(69.37);
         ///padding-bottom: vw.vw(69.37);
         overflow: hidden;
+        position: relative;
         /************************************************/
         background-size: cover;
         background-image: url(#{c.$url}/wp-content/themes/ezequiel/partes/slide/imagens/fundao.jpg);
 
         /************************************************/
+         @keyframes opacidades {
+            0%   { opacity: 0.7;}
+            50%  { opacity: 1; }
+            100% { opacity: 0.7;}
+        }
+        /************************************************/
+        #arrowRightX,
+        #arrowLeftX {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 7.168vw;
+            width: auto;
+            animation: opacidades 1500ms infinite;
+        }
+        #arrowLeftX {
+            left: 3vw;
+            opacity: 1;
+        }
+        #arrowRightX {
+            right: 3vw;
+            opacity: 1;
+        }
+
+        /************************************************/
         ul {
-            
-            
             li {
                 article {
                     width: vw.vw(812.59);

@@ -26,19 +26,33 @@
             font-family: "font2";
             //@include marginBottom();
             @include tp.titulos();
+            ///border: 1px solid red;
+            height:8vh;
         }
         font-family: "font1";
         color: cores.$cor2;
+
+        p{
+            min-height: 20vh;
+        }
 
         a {
             @include buttons.botao() {
             }
         }
 
+
+          #arrowRightX,
+        #arrowLeftX {
+            display: none!important;
+        }
+
+
         #slideDeProdutos {
             picture {
-                width: 90vw;
-                height: 10vh;
+                max-width: 80vw;
+                max-height: 50vh;
+
                 display: block;
                 position: relative;
                 img {
@@ -46,20 +60,16 @@
                     height: auto;
                     width: 100%;
                     object-fit: contain;
+                    
                 }
             }
         }
 
         #imagemLateral {
-            top: 30vw;
             width: 90vw;
-            height: 80vh;
+            height: auto; //height: 80vh;
             position: relative;
             img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
                 height: vw(200);
                 width: auto;
                 display: block;

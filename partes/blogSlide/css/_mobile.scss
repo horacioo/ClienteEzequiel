@@ -1,0 +1,174 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as buttons;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(mobile) {
+    @keyframes openBlog {
+        0% {
+            left: -50vw;
+            opacity: 0;
+        }
+
+        100% {
+            left: 50% !important;
+            opacity: 1;
+            left: 50%;
+        }
+    }
+
+    @keyframes piscaPisca {
+        0% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #textoDeApresentacao {
+        top: 15.4vw;
+        position: absolute;
+        display: block;
+        line-height: 150%;
+        padding: vw.vw(15);
+        padding-left: vw.vw(35);
+        padding-right: vw.vw(50);
+        font-family: "light1";
+        color: white;
+        text-align: justify;
+        @include tipografia.tamanhoFontes();
+        strong {
+            font-family: "font1";
+        }
+    }
+
+    #voltar {
+        position: sticky;
+        z-index: 1000000000000000000000000000;
+        top: 88%;
+        transform: translateX(-50%);
+        background-color: #474747;
+        color: #fff;
+        display: inline-block;
+        padding: 5vw;
+        left: 8vw;
+        border-radius: 10vw;
+        animation: piscaPisca infinite 900ms;
+    }
+
+    #label {
+        position: fixed;
+        left: -9vw;
+        z-index: 999999999;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        background-color: #1b746f;
+        font-family: "font1";
+        padding: vw.vw(20);
+        color: white;
+        border-top-left-radius: vw.vw(10);
+        border-top-right-radius: vw.vw(10);
+    }
+
+    .voltar {
+        animation: openBlog 500ms reverse;
+    }
+
+    .movimento {
+        animation: openBlog 500ms forwards;
+    }
+
+    #blog_links {
+        position: fixed;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        z-index: 500000000000000000;
+        height: 50vh;
+        left: -80%; ///left: 50% !important;
+        width: 100vw;
+        min-height: 104vh;
+        overflow: scroll;
+        header,
+        footer {
+            all: unset;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            background-color: cores.$cor1;
+            padding-top: 150vw;
+            padding-bottom: vw.vw(19.28);
+            border-top-right-radius: vw.vw(10);
+            border-bottom-right-radius: vw.vw(10);
+            background-color: #1b746f;
+            .card {
+                margin-bottom: 5vh;
+                width: 90%;
+                height: 80vh;
+                background-color: #d9d9d9;
+                display: flex;
+
+                flex-direction: column;
+                border-radius: vw.vw(10);
+                overflow: hidden;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 3vw;
+                left: 50%;
+                transform: translateX(-50%);
+                position: relative;
+                @include tipografia.tamanhoFontes();
+                picture {
+                    border-radius: vw.vw(10);
+                    overflow: hidden;
+                    height: 30vh;
+                    width: 100%;
+                    img {
+                        min-width: 100%;
+                        min-height: 100%;
+                        width: auto;
+                        filter: saturate(1) brightness(1.4);
+                        border: 1px solid grey;
+                    }
+                }
+                h2 {
+                    width: 100%;
+                    display: inline-block;
+                    font-family: "font2";
+                    font-size: 7vw;
+
+                    a {
+                        color: cores.$cor1;
+                    }
+                }
+                p {
+                    font-family: "light1";
+                }
+
+                footer {
+                    width: 100%;
+                    .btn {
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        padding: 2vw;
+                        border-radius: 2vw;
+                        background-color: #5d5d5d;
+                        color: white;
+                        font-family: "font2";
+                    }
+
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

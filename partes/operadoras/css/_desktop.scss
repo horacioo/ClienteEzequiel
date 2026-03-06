@@ -93,6 +93,7 @@
                 left: vw.vw(76.67);
                 top: vw.vw(358.79);
                 #paineisComDetalhes {
+                    
                     display: flex;
                     flex-direction: column;
                     gap: vw.vw(13.6);
@@ -118,11 +119,10 @@
                     #descricaoDaOperadora {
                         font-size: vw.vw(8.37);
                         line-height: 166%;
-                        font-family: "light1";
+                        font-family: 'font1';//font-family: "light1";
                         font-weight: 200;
                         text-align: left;
                         color: #5d5d5d;
-
                     }
 
                     /**************************************/
